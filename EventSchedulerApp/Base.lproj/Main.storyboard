@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6dr-Hs-88D">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Page-->
+        <scene sceneID="Zuk-az-S9V">
+            <objects>
+                <tableViewController id="6dr-Hs-88D" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vkI-1I-dxN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="e39-S0-ylQ" customClass="DetailHeaderView" customModule="EventSchedulerApp">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="455"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavHeaderBarImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sjp-vp-usy">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="455"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="sjp-vp-usy" secondAttribute="bottom" id="5jp-IM-yAT"/>
+                                <constraint firstItem="sjp-vp-usy" firstAttribute="leading" secondItem="e39-S0-ylQ" secondAttribute="leading" id="KAc-ce-bKk"/>
+                                <constraint firstAttribute="bottom" secondItem="sjp-vp-usy" secondAttribute="bottom" id="PnG-vF-brD"/>
+                                <constraint firstAttribute="trailing" secondItem="sjp-vp-usy" secondAttribute="trailing" id="hbb-ex-sIU"/>
+                                <constraint firstAttribute="bottom" secondItem="sjp-vp-usy" secondAttribute="bottom" id="iT1-os-bHE"/>
+                                <constraint firstItem="sjp-vp-usy" firstAttribute="top" secondItem="e39-S0-ylQ" secondAttribute="top" id="rgl-dJ-ygP"/>
+                                <constraint firstItem="sjp-vp-usy" firstAttribute="top" secondItem="e39-S0-ylQ" secondAttribute="top" id="rvT-d7-Haa"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="imageView" destination="sjp-vp-usy" id="CjS-fo-HBQ"/>
+                            </connections>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="yeO-Fe-2oQ">
+                                <rect key="frame" x="0.0" y="483" width="414" height="56"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yeO-Fe-2oQ" id="QHf-Ae-ep4">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Events" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuq-eS-9IV">
+                                            <rect key="frame" x="258" y="20.5" width="136" height="24.5"/>
+                                            <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="21"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="fuq-eS-9IV" secondAttribute="bottom" id="Fzn-Xi-jrz"/>
+                                        <constraint firstItem="fuq-eS-9IV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QHf-Ae-ep4" secondAttribute="leading" constant="20" symbolic="YES" id="Jgu-Zt-pJs"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fuq-eS-9IV" secondAttribute="trailing" id="tHP-8k-o5N"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="accessoryView" destination="sjp-vp-usy" id="ycO-DF-pfr"/>
+                                    <outlet property="editingAccessoryView" destination="fuq-eS-9IV" id="uFT-dY-vX4"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6dr-Hs-88D" id="9YC-LH-CJC"/>
+                            <outlet property="delegate" destination="6dr-Hs-88D" id="ocK-8V-R8u"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Home Page" id="KM6-qR-3q7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7X-5u-EFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36.231884057971016" y="139.28571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n1h-Pi-ysI">
+            <objects>
+                <navigationController id="vT4-Vz-RWz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vBb-cY-dze">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6dr-Hs-88D" kind="relationship" relationship="rootViewController" id="HFI-99-7uS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GSj-Sd-XMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1752" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NavHeaderBarImage.jpg" width="300" height="168"/>
+    </resources>
+</document>
